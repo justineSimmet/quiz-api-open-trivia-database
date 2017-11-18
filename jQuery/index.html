@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz jQuery !</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">  
+</head>
+<body>
+
+  <div class="modal" id="quiz-result">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <div class="modal" id="quiz-error">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="notification is-danger">
+        <button class="delete"></button>
+          <p id="error-message"></p>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <header class="hero is-primary is-fullheight" id="landing-area">
+    <div class="hero-body has-text-centered">
+      <div class="container">
+        <p class="title is-1">
+          C'est l'heure du quiz !
+        </p>
+        <p>Lancez une série de 10 questions portant sur différents sujets et répondez du mieux que vous pouvez.</p>
+        <div>
+          <a class="button is-primary is-inverted is-large start-quiz" data-thema="all">Allons-y Alonso !</a>
+        </div>
+        <h2 class="subtitle">
+           Hop pop pop ! Je veux choisir mon thème.
+        </h2>
+        <div class="field is-grouped is-grouped-multiline is-grouped-centered">
+          <p class="control">
+            <a class="button is-primary is-inverted is-outlined start-quiz" data-thema="book">
+              Littérature
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-primary is-inverted is-outlined start-quiz" data-thema="music">
+              Musique
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-primary is-inverted is-outlined start-quiz" data-thema="movie">
+              Cinéma
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-primary is-inverted is-outlined start-quiz" data-thema="history">
+              Histoire
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-primary is-inverted is-outlined start-quiz" data-thema="geography">
+              Géographie
+            </a>
+          </p>
+          <p class="control">
+            <a class="button is-primary is-inverted is-outlined start-quiz" data-thema="nature">
+              Science et vie
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero is-light is-fullheight" id="quiz-area">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <p class="title is-2 has-text-centered" id="quiz-question"></p>
+          </div>
+        </div>
+
+        <div class="columns reverse-order">
+          <div class="column is-light is-one-quarter" id="quiz-info">
+            <div class="has-text-centered" id="quiz-score">
+              <p class="title is-1"></p>
+            </div>
+            <div class="has-text-centered" id="quiz-step">
+              <p></p>
+            </div>
+          </div>
+          <div class="column">
+            
+          </div>
+          <div class="column is-two-thirds" id="quiz-options">
+          </div>
+        </div>
+        <div class="columns has-text-centered" id="quiz-next">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.4/src/loadingoverlay.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/he/1.1.1/he.min.js"></script>
+<script src="assets/js/quiz-script.js"></script>
+</body>
+</html>
